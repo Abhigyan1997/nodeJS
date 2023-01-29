@@ -1,5 +1,27 @@
 {
   "dependencies": {
     "uuid": "^9.0.0"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "NodeJS ",
+  "main": "file.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "nodemon file.js",
+    "start-server":"node file.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhigyan1997/nodeJS.git"
+  },
+  "author": "Alok Abhigyan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abhigyan1997/nodeJS/issues"
+  },
+  "homepage": "https://github.com/Abhigyan1997/nodeJS#readme"
 }
