@@ -1,11 +1,15 @@
-const http=require('http');
 
-const route=require('./route');
+const express=require('express');
 
-console.log(route.someText);
+const app=express();
 
-const server=http.createServer(route.handler);
+app.use((req,res,next)=>{
+    console.log('I am Middleware');
+    next();
+});
+app.use((req,res,next)=>{
+    console.log('I am another Middleware');
+    res.send('<h1>Hello from Express JS!</h1>')
+});
 
-
-server.listen(5000);  
-
+app.listen(5000);
