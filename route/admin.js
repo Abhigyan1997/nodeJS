@@ -7,7 +7,7 @@ route.get('/add-product',(req,res,next)=>{
 });
 route.post('/add-product',(req,res,next)=>{
     console.log(req.body);
-    res.redirect('/');
+    res.redirect('/admin');
 });
 
 module.exports=route; 
