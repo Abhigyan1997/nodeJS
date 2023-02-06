@@ -2,12 +2,9 @@ const express=require('express');
 
  const path=require('path');
 
+ const productController=require('../Controller/product');
 const route=express.Router();
 
-route.get('/contact-us',(req,res,next)=>{
-    res.sendFile(path.join( __dirname ,'../','views','contact.html'));
-});
-route.post('/success', (req, res) => {
-    res.send('Form successfully filled');
-  });
+route.get('/contact-us',productController.getContact);
+route.post('/success', productController.postContact);
 module.exports=route; 

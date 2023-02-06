@@ -8,19 +8,21 @@ const app=express();
 
 app.use(bodyParser.urlencoded({extended:false}));
 
+const errorController=require('./Controller/error404')
+
 const adminRoute=require('./route/admin');
 
 const shopRoute=require('./route/shop');
 
 const contactRoute=require('./route/contact');
 
+
+
 app.use(adminRoute);
 app.use(contactRoute);
 app.use(shopRoute);
 
-app.use("/",(req , res , next)=>{
-    res.status(404).send("<h1>Page not found</h1>");
-});
+app.use(errorController.errorPage)
    
 app.listen(9000);
   
